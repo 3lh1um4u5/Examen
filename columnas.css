@@ -1,0 +1,52 @@
+.nav-enlace {
+    display: inline-block;
+    background: blue;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    /*en esta linea nosostros estamos quitando el subrayado que sale debajo del texto*/
+}
+
+/*hover es una propiedad que nos permite interactuar con los colores pasando el mouse por encima de las anclas */
+.nav-enlace:hover {
+
+    background: black;
+}
+
+/* con esta linea el contenido de nuestra etiqueta nav cambiara de color y de tamaño, tal y como se muestra */
+nav {
+    background: black;
+    padding: 30px;
+    /* en esta linea quitamos los margenes que rodean al texto de la nav bar y los separamos */
+    display: flex;
+    justify-content: space-around;
+}
+.nav-boton{
+    background: #FF0000;
+    color: seashell;
+    padding: 10px 0px;
+    border: 2px solid black;
+    display: none;
+}
+
+/* (los media query son excepciones,es decir solo se ejecutaran en caso de cumplir con los requisitos de los mismos)en esta linea utilizamos el @media para que cuando nuestra pagina se vea en una menor resolucion el color de fondo de nuestro menu cambie a azul */
+@media (max-width: 600px) {
+    nav {
+        background: black;
+        /* con flex direction,nuestra menu al visualizarse en una menor resolucion se acomodara en columna en lugar de hilera */
+        flex-direction: column;
+    }
+
+    .nav-enlace {
+        /* en esta linea agregamos un margen de espacio entre cada apartado de nuestro menu */
+        margin: 10px 10px;
+    }
+
+    .nav-boton{
+        /* esta condicion solo se aplica cuando se vizualice en menor resolucion */
+        display: inline-block;
+    }
+    .desaparece{
+        display:none;
+    }
+}
